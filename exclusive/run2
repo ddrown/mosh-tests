@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# simulate two writers and four readers
+
+echo 1 >.savefile
+./test 1 &
+./test 1 &
+./test 2 &
+./test 2 &
+sleep 1
+echo 1 >.savefile
+wait

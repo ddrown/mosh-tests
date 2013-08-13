@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# simulate one writers and four readers
+
+echo 1 >.savefile
+./test 1 &
+./test 1 &
+./test 1 &
+./test 1 &
+wait
